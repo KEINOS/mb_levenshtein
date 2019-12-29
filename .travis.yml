@@ -10,12 +10,10 @@ php:
   # Latest Stable of PHP v7.1
   - 7.1.32
   # Latest Stable of PHP v7.2
-  - 7.2.26
-  # Latest Stable of PHP v7.3
-  - 7.3.13
-  # Current Stable 2019.12.29
+  - 7.2.22
+  # Current Stable 2019.09.16
   #   https://www.php.net/downloads.php
-  - 7.4.1
+  - 7.3.9
   # latest version of PHP
   - nightly
 

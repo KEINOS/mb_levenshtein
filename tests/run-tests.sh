@@ -38,7 +38,7 @@ RESULT=0
 for path_file in $(ls test_*.php); do
     echo -n "- TESTING: ${path_file} ... "
 
-    php $path_file 1>/dev/null 2>/dev/null
+    php $path_file 1>/dev/null
 
     [ $? -eq 0 ] && {
         echo 'OK'
