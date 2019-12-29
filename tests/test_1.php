@@ -2,7 +2,7 @@
 include_once('../mb_levenshtein.php');
 
 $query = 'ほあようごぁいまーしゅ';
-$comps = [
+$comps = array(
     'こんにちはー',
     'おはようございまーす',
     'こんばんはー',
@@ -10,7 +10,7 @@ $comps = [
     'いただきまーす',
     'おつかれさまー',
     'ぬぁあああんつかれたもぉぉぉぉぉぉん',
-];
+);
 $expect = 'おはようございまーす';
 
 foreach ($comps as $comp) {
