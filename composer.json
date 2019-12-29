@@ -1,5 +1,5 @@
 {
-    "name": "keinos/mb_Levenshtein",
+    "name": "keinos/mb_levenshtein",
     "description": "Levenshtein function with UTF-8 support.",
     "keywords": ["levenshtein", "utf-8"],
     "homepage": "https://github.com/KEINOS/mb_levenshtein",
