@@ -1,0 +1,3 @@
+samples/composer/vendor/*
+samples/composer/composer.lock
+samples/composer/composer.json
