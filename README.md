@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/KEINOS/mb_levenshtein.svg?branch=master)](https://travis-ci.org/KEINOS/mb_levenshtein)
-[![](https://img.shields.io/packagist/php-v/keinos/mb_levenshtein)](https://packagist.org/packages/keinos/mb_levenshtein "Supported PHP Version")
+[![](https://img.shields.io/packagist/php-v/keinos/mb_levenshtein)](https://travis-ci.org/KEINOS/mb_levenshtein "Supported PHP Version")
 [![](https://img.shields.io/packagist/l/keinos/mb_levenshtein)](https://github.com/KEINOS/mb_levenshtein/blob/master/LICENSE)
 
 # mb_levenshtein PHP function
@@ -119,7 +119,7 @@ Query word: cafe
   tea: 4
   sake: 2
 $ ls
-composer.json	composer.lock	sample1.php	vendor
+composer.json   composer.lock   sample.php  vendor
 $ cat composer.json
 {
     "require": {
