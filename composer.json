@@ -1,0 +1,41 @@
+{
+    "name": "keinos/mb_Levenshtein",
+    "description": "Levenshtein function with UTF-8 support.",
+    "keywords": ["levenshtein", "utf-8"],
+    "homepage": "https://github.com/KEINOS/mb_levenshtein",
+    "authors": [
+        {
+            "name": "KEINOS",
+            "homepage": "https://github.com/KEINOS",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Luciole75w",
+            "homepage": "https://www.php.net/manual/en/function.levenshtein.php#113702",
+            "role": "Original Author"
+        },
+        {
+            "name": "mpyw",
+            "homepage": "https://qiita.com/mpyw/items/2b636827730e06c71e3d",
+            "role": "Most influenced us on this script."
+        },
+        {
+            "name": "THE CONTRIBUTORS",
+            "homepage": "https://github.com/KEINOS/mb_levenshtein/graphs/contributors",
+            "role": "Contributor"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "files": ["mb_levenshtein.php"]
+    },
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "archive": {
+        "exclude": ["/samples", "/tests", "/.travis.yml"]
+    }
+}
