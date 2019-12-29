@@ -7,6 +7,29 @@
 Levenshtein PHP function with UTF-8 support. This function finds similarity distance between two strings.
 
 - [Source Code](https://github.com/KEINOS/mb_levenshtein) @ GitHub
+- [Composer available](https://packagist.org/packages/keinos/mb_levenshtein) @ Packagist
+
+## Functions
+
+- Returns in Levenshtein Distance
+
+    ```php
+    mb_levenshtein ( string $str1 , string $str2 ) : int
+    ```
+
+    ```php
+    mb_levenshtein ( string $str1 , string $str2 , int $cost_ins , int $cost_rep , int $cost_del ) : int
+    ```
+
+- Returns in Levenshtein Ratio (between 0-1)
+
+    ```php
+    mb_levenshtein_ratio ( string $str1 , string $str2 ) : float
+    ```
+
+    ```php
+    mb_levenshtein_ratio ( string $str1 , string $str2 , int $cost_ins , int $cost_rep , int $cost_del ) : float
+    ```
 
 ## Usage
 
@@ -81,7 +104,14 @@ Results:
 $ ls
 sample.php
 $ composer require keinos/mb_levenshtein
-...
+Using version ^1.0 for keinos/mb_levenshtein
+./composer.json has been created
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Installing keinos/mb_levenshtein (1.0.0): Downloading (100%)
+Writing lock file
+Generating autoload files
 $ php ./sample.php
 Query word: cafe
   coffee: 3
@@ -90,4 +120,10 @@ Query word: cafe
   sake: 2
 $ ls
 composer.json	composer.lock	sample1.php	vendor
+$ cat composer.json
+{
+    "require": {
+        "keinos/mb_levenshtein": "^1.0"
+    }
+}
 ```
