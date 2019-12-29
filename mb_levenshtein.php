@@ -2,7 +2,9 @@
 /**
  * Levenshtein function with UTF-8 support.
  *
- * @ref: https://www.php.net/manual/ja/function.levenshtein.php#113702
+ * @ref: https://www.php.net/manual/ja/function.levenshtein.php#113702 by luciole75w's comment @ PHP Manual
+ * @ref: https://qiita.com/mpyw/items/2b636827730e06c71e3d by mpyw's article @ Qiita
+ * @url: https://github.com/KEINOS/mb_levenshtein for latest information @ GitHub
  */
 
 namespace {
@@ -12,8 +14,8 @@ namespace {
  *
  * Returns levenshtein distance in ratio between 0 to 1.
  *
- * @param  string  $s1        One of the strings being evaluated for Levenshtein distance.
- * @param  string  $s2        One of the strings being evaluated for Levenshtein distance.
+ * @param  string  $s1        One of the strings being evaluated for Levenshtein ratio.
+ * @param  string  $s2        One of the strings being evaluated for Levenshtein ratio.
  * @param  integer $cost_ins  Defines the cost of insertion.
  * @param  integer $cost_rep  Defines the cost of replacement.
  * @param  integer $cost_del  Defines the cost of deletion.
