@@ -56,6 +56,7 @@ foreach ($comps as $comp) {
 Results:
 
 ```shellsession
+$ # The smaller, the closer
 $ php ./sample.php
 Query word: cafe
   coffee: 3
