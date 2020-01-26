@@ -11,7 +11,7 @@ Levenshtein PHP function with UTF-8 support. This function finds similarity dist
 
 ## Functions
 
-- Returns in Levenshtein Distance
+- Returns in Levenshtein Distance. (The smaller, the closer)
 
     ```php
     mb_levenshtein ( string $str1 , string $str2 ) : int
@@ -21,7 +21,7 @@ Levenshtein PHP function with UTF-8 support. This function finds similarity dist
     mb_levenshtein ( string $str1 , string $str2 , int $cost_ins , int $cost_rep , int $cost_del ) : int
     ```
 
-- Returns in Levenshtein Ratio (between 0-1)
+- Returns in Levenshtein Ratio between 0 to 1. (The bigger, the closer)
 
     ```php
     mb_levenshtein_ratio ( string $str1 , string $str2 ) : float
@@ -113,6 +113,7 @@ Package operations: 1 install, 0 updates, 0 removals
   - Installing keinos/mb_levenshtein (1.0.0): Downloading (100%)
 Writing lock file
 Generating autoload files
+$ # The smaller, the closer
 $ php ./sample.php
 Query word: cafe
   coffee: 3
