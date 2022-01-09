@@ -60,8 +60,8 @@ function mb_levenshtein_ratio($s1, $s2, $cost_ins = 1, $cost_rep = 1, $cost_del 
 function mb_levenshtein($s1, $s2, $cost_ins = 1, $cost_rep = 1, $cost_del = 1)
 {
     $charMap = array();
-    $s1 = convert_mb_ascii($s1, $charMap);
-    $s2 = convert_mb_ascii($s2, $charMap);
+    convert_mb_ascii($s1, $charMap);
+    convert_mb_ascii($s2, $charMap);
 
     return levenshtein($s1, $s2, $cost_ins, $cost_rep, $cost_del);
 }
@@ -82,25 +82,27 @@ function mb_levenshtein($s1, $s2, $cost_ins = 1, $cost_rep = 1, $cost_del = 1)
  * @param  string $str  UTF-8 string to be converted to extended ASCII.
  * @param  array  $map  Reference of the map.
  *
- * @return string Extended ASCII
+ * @return void
  */
-function convert_mb_ascii($str, &$map)
+function convert_mb_ascii(&$str, &$map)
 {
     // find all utf-8 characters
     $matches = array();
     if (! preg_match_all('/[\xC0-\xF7][\x80-\xBF]+/', $str, $matches)) {
-        return $str; // plain ascii string
+        return; // plain ascii string
     }
 
     // update the encoding map with the characters not already met
+    $mapCount = count($map);
     foreach ($matches[0] as $mbc) {
         if (! isset($map[$mbc])) {
-            $map[$mbc] = chr(128 + count($map));
+            $map[$mbc] = chr(128 + $mapCount);
+            $mapCount++;
         }
     }
 
     // finally remap non-ascii characters
-    return strtr($str, $map);
+    $str = strtr($str, $map);
 }
 
 }
